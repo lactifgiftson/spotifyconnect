@@ -26,7 +26,7 @@ webpackJsonp([0,1],[
 	var WmgSpotifyWrapper = __webpack_require__(2);
 	
 	var spotifyOptions = {
-	  clientId: 'a9a96517a88f4386ad1b971b326d137c',
+	  clientId: '6e3f669872774d4b8c97839a5c05ff9c',
 	  scopes: ['playlist-read-private', 'playlist-modify-public', 'playlist-modify-private', 'user-follow-modify', 'user-read-email'],
 	  startButton: 'follow-artist',
 	  container: 'spotify-app',

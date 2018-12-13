@@ -7,8 +7,6 @@
 		<meta name="twitter:image" content="">
 		<meta charset="utf-8" />
 		<title>The Wild Feathers | Nashville Flyaway Sweepstakes</title>
-		<link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="all" />
-		<link type="text/css" rel="stylesheet" href="styles.css" media="all" />
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
 		<link rel="canonical" href="" />
 		<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
@@ -20,7 +18,6 @@
 		<meta property="og:title" content="The Wild Feathers | Nashville Flyaway Sweepstakes"/>
 		<meta property="og:description" content="Enter for your chance to win a trip to fly to Nashville, Tennessee to see The Wild Feathers perform at the Ryman Auditorium!" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
-		<script src="js/scripts.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.typekit.net/uwp2utl.css">
 		<script src="js/shared.js"></script>
@@ -29,9 +26,6 @@
 	<body id="twf-sp">
 
 		<div class="site-container">
-			<div class="logo">
-				<img src="images/dk-logo.png">
-			</div>
 			<div class="neon-box">
 				<div class="line-1">
 					Enter for your chance to win
@@ -40,9 +34,6 @@
 					a trip to see The Wild Feathers perform
 					<br>
 					at the historic Ryman Auditorium in Nashville, Tennessee!
-				</div>
-				<div class="neonLines">
-					<img src="images/dk-glow.png" class="neonBar">
 				</div>
 			</div>
 			<div class="contest-info">
@@ -60,7 +51,7 @@
 				</div>
 			</div>
 			<div class="follow">
-				<a  href="javascript:void(0)" class="spotify-btn" id="follow-artist-1"><img src="images/dk-follow.png"></a>
+				<a href="javascript:void(0)" class="spotify-btn" id="follow-artist-1">click</a>
 			</div>
 			<div id="spotify-app"></div>
 			<div class="alter">
@@ -70,11 +61,8 @@
 				</div>
 			</div>
 			<div class="footer">
-				<div class="southwest">
-					<img src="images/dk-southwest.png">
-				</div>
 				<div class="enter-site">
-					<a href="fonts/?frontpage=true" data-track="enter-site">ENTER THEWILDFEATHERS.COM&nbsp;&nbsp;<span><img src="images/arrowImage.png"></span></a>
+
 				</div>
 				<div class="socials">
 					<span class="filler">Follow Us</span>
@@ -147,7 +135,7 @@
 								},
 								success : function(response) {
 									userEmail = response.email;
-									alert("follow");
+									alert("follow success");
 									$.ajax({
 										url : 'https://api.spotify.com/v1/me/following?type=artist&ids=5YENCIQVzziCFdoVWc26Bn',
 										type : 'PUT',
@@ -175,9 +163,9 @@
 
 						document.getElementById('follow-artist-1').addEventListener('click', function() {
 
-							var client_id = 'a9a96517a88f4386ad1b971b326d137c';
+							var client_id = '6e3f669872774d4b8c97839a5c05ff9c';
 							// Your client id
-							var redirect_uri = 'http://apps.coleswindell.com/twf/';
+							var redirect_uri = 'http://localhost/spotifyconnect/spotifyconnect/';
 							// Your redirect uri
 
 							var state = generateRandomString(16);
@@ -199,9 +187,7 @@
 			</script>
 		</div>
 		<div class="mlist-section">
-			<?php
-			include "mlist.php";
-			?>
+
 		</div>
 	</body>
 </html>
